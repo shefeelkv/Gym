@@ -91,7 +91,7 @@ const Programs = () => {
   ];
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/api/programs/')
+    axios.get('/api/programs/')
       .then(res => {
         setPrograms(res.data.length > 0 ? res.data : fallbackPrograms);
         setLoading(false);

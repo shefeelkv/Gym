@@ -70,7 +70,7 @@ const Memberships = ({ onSelectPlan }) => {
   ];
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/api/memberships/')
+    axios.get('/api/memberships/')
       .then(res => {
         setPlans(res.data.length > 0 ? res.data : fallbackPlans);
         setLoading(false);

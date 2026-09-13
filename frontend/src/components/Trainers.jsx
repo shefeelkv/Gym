@@ -65,7 +65,7 @@ const Trainers = ({ isAuthenticated, onOpenLogin }) => {
   ];
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/api/trainers/')
+    axios.get('/api/trainers/')
       .then(res => {
         setTrainers(res.data.length > 0 ? res.data : fallbackTrainers);
         setLoading(false);
@@ -105,7 +105,7 @@ const Trainers = ({ isAuthenticated, onOpenLogin }) => {
       member_email: localStorage.getItem('user_email') || "member@fitnex.com"
     };
 
-    axios.post('http://127.0.0.1:8000/api/bookings/', bookingPayload, {
+    axios.post('/api/bookings/', bookingPayload, {
       headers: {
         Authorization: `Bearer ${token}`
       }

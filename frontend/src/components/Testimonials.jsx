@@ -38,7 +38,7 @@ const Testimonials = () => {
   ];
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/api/testimonials/')
+    axios.get('/api/testimonials/')
       .then(res => {
         setTestimonials(res.data.length > 0 ? res.data : fallbackTestimonials);
         setLoading(false);

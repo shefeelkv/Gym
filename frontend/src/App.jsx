@@ -70,7 +70,7 @@ function App() {
       password: loginPassVal
     };
 
-    axios.post('http://127.0.0.1:8000/api/auth/login/', payload)
+    axios.post('/api/auth/login/', payload)
       .then(res => {
         const { access, refresh } = res.data;
         localStorage.setItem('access_token', access);
@@ -107,7 +107,7 @@ function App() {
       role: 'member'
     };
 
-    axios.post('http://127.0.0.1:8000/api/auth/register/', payload)
+    axios.post('/api/auth/register/', payload)
       .then(res => {
         const { access, refresh, user } = res.data;
         localStorage.setItem('access_token', access);

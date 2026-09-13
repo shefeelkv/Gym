@@ -35,7 +35,7 @@ const Contact = () => {
 
     const payload = { name, phone, email, program, message };
 
-    axios.post('http://127.0.0.1:8000/api/contact/', payload)
+    axios.post('/api/contact/', payload)
       .then(res => {
         setSuccess(true);
         setName('');

@@ -19,7 +19,7 @@ const Gallery = () => {
   ];
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/api/gallery/')
+    axios.get('/api/gallery/')
       .then(res => {
         setGalleryItems(res.data.length > 0 ? res.data : fallbackGallery);
         setLoading(false);
